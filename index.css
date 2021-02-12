@@ -1,0 +1,130 @@
+body {
+    margin: 0px;
+    font-family: Open sans-serif;
+}
+
+.toDoList {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.time {
+    color: #FFFFFF;
+    font-size: 100px;
+}
+
+.oz {
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: #CFCFCF;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFB800;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.header > .text {
+    color: #FFFFFF;
+    font-size: 28px;
+}
+
+.counting {
+    display: flex;
+    flex-direction: row;
+    border-radius: 100px;
+    background-color: #BE4130;
+    padding: 0 7px;
+}
+
+.counting > .text {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.toDos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 16px;
+}
+
+.toDo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    background-color: #F3F3F3;
+    border-radius: 16px;
+    box-shadow: 0px 8px 4px #00000025;
+    margin: 12px 0;
+}
+
+.toDo > .text {
+    color: #000000;
+    font-size: 28px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    background-color: #00A3FF;
+    padding: 10px 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.addBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.bar {
+    width: 3px;
+    border-radius: 16px;
+    background-color: #0092E3;
+}
+
+.changeBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nemo {
+    width: 26px;
+    height: 26px;
+    background-color: aliceblue;
+}

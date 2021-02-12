@@ -1,8 +1,8 @@
 const clockContainer = document.querySelector(".time"),
-  clockTitle = clockContainer.querySelector("h1");
+  clockTitle = clockContainer.querySelector("span");
 
 const clockOz = document.querySelector(".oz"),
-    clockAMPM = clockOz.querySelector("h3");
+    clockAMPM = clockOz.querySelector("span");
 
 function getTime() {
   const date = new Date();
