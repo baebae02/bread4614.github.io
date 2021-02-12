@@ -6,8 +6,13 @@ const form = document.querySelector(".idForm"),
   //id생성자 불러와서 input에 저장함, IDGreeting은 h4태그인데 걔를 불러와서 greeting에 저장함.
 
 const USER_LS = "currentUser",
-  SHOWING_CN = "showing";
+    SHOWING_CN = "showing",
+    HIDDEN_CN = "hidden";
 
+const TODO = document.querySelector(".toDoList");
+ 
+
+ 
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
 }
@@ -20,12 +25,13 @@ function handleSubmit(event) {
 }
 
 function askForName() {
-  form.classList.add(SHOWING_CN);
   form.addEventListener("submit", handleSubmit);
 }
 
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
+  form.classList.add(HIDDEN_CN);
+  TODO.classList.remove(HIDDEN_CN);
   greeting.classList.add(SHOWING_CN);
   greeting.innerText = `${text}님`;
 }

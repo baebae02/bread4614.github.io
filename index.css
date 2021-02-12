@@ -1,3 +1,4 @@
+
 @keyframes fadeInOut {
     from {opacity: 1}
     to {opacity: 0}
@@ -157,4 +158,24 @@ body {
 
 .changeBtn:hover {
     background-color: #117AB5;
+}
+
+/*서현*/
+
+.idForm{
+    width:369px;
+    height:277px;
+    border : 1px solid #00A3FF ;
+    background-color: #193747;
+    border-radius: 10px;
+}
+
+.idForm > text{
+    font-size:24px;
+    font-family: 'kv1447307594' !important;
+
+}
+
+.hidden {
+    display: none;
 }
