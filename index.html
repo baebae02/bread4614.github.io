@@ -8,27 +8,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="index.css" rel="stylesheet" />
     <style>
-        body {font-family: 'Noto Sans KR', sans-serif;
+        @font-face {
+            font-family: 'SeoulNamsanM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
     </style>
 </head>
 <body>
-    <form class="idForm">
-        <input type="text" placeholder="사용자의 닉네임을 적어주세요"/>
-    </form>
-    <div class="toDoList hidden">
-        <div class="container">
-            <!--------------------------밑에 clock이랑 jsGreeting 애니메이션 넣을 거-->
-            <div class="clock">
-                <div class="time">
-                    <span></span>
-                </div>
-                <div class="oz">
-                    <span></span>
-                </div>
+    
+    <div class="toDoList">
+        <form class="idForm">
+            <div class="title">
+                사용자의 닉네임을 적어주세요
             </div>
-            <div class="jsGreeting">
-                <h4 class="IDGreeting greetings"></h4>
+            <input class="input" type="text" />
+        </form>
+        <div class="container hidden">
+            <!--------------------------밑에 clock이랑 jsGreeting 애니메이션 넣을 거-->
+            <div class="topTitle">
+                <div class="container-title">
+                    <div class="clock">
+                        <div class="time">
+                            <span></span>
+                        </div>
+                        <div class="oz">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="jsGreeting">
+                        <span class="IDGreeting greetings"></span>
+                        <span class="sir">님</span>
+                    </div>
+                    <div class="clock">
+                        <div class="time">
+                            <span></span>
+                        </div>
+                        <div class="oz">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="wrapper">
                 <div class="header">
@@ -42,19 +63,19 @@
                     </div>
                 </div>
                 <div class="toDos">
-                    <div class="toDo">
+                    <div class="toDo" id="1">
                         <div class="text">
                             ToDoList 개발하기
                         </div>
                     </div>
-                    <div class="toDo">
+                    <div class="toDo" id="2">
                         <div class="text">
-                            ToDoList 개발하기
+                            대구 여행가기
                         </div>
                     </div>
-                    <div class="toDo">
+                    <div class="toDo" id="3">
                         <div class="text">
-                            ToDoList 개발하기
+                            운동하기
                         </div>
                     </div>
                     <div class="toDo">
@@ -76,12 +97,23 @@
                 </div>
             </div>
         </div>
-        <div class="logo">
-            <img />
+        <div class="menus">
+            
+            <div class="complete">
+                
+            </div>
+            <div class="edit">
+
+            </div>
+            <div class="delete">
+
+            </div>
         </div>
+        <div class="black hidden"></div>
     </div>
     <script src="index.js"></script>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
+    <script src="black.js"></script>
 </body>
 </html>

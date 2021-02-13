@@ -4,10 +4,50 @@
     to {opacity: 0}
 }
 
+@keyframes up {
+    from {
+        top: 0;
+    }
+    to {
+        top: 50vh;
+    }
+}
+
+@keyframes light-yellow {
+    from {
+        background-color: #554D37;
+    }
+    to {
+        background-color: #6B5825;
+    }
+}
+
+@keyframes light-blue {
+    from {
+        background-color: #193747;
+    }
+    to {
+        background-color: #1A4054;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    50% {
+        transform: translate3d(0px, -90px, 0px);
+    }
+    100% {
+        transform: translate3d(0px, -180px, 0px);
+    }
+}
+
 
 body {
     margin: 0px;
     user-select: none;
+    font-family: 'seoulNamsanM', sans-serif;
 }
 
 .toDoList {
@@ -25,15 +65,33 @@ body {
     align-items: center;
 }
 
+.topTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 90px;
+}
+
+.container-title {
+    animation-name: slide-up;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+}
+
 .clock {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    font-weight: bold;
+    height: 90px;
+    overflow: hidden;
 }
 
 .time {
     color: #FFFFFF;
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .oz {
@@ -41,6 +99,23 @@ body {
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-duration: 1s;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.jsGreeting {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 90px;
+    overflow: hidden;
+}
+.IDGreeting {
+    color: #FFFFFF;
+    font-size: 70px; 
+}
+
+.sir {
     color: #FFFFFF;
     font-size: 32px;
 }
@@ -73,7 +148,7 @@ body {
     flex-direction: row;
     border-radius: 100px;
     background-color: #BE4130;
-    padding: 0 9px;
+    padding: 4px 9px;
 }
 
 .counting > .text {
@@ -86,10 +161,11 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 40px 16px;
-    width: 20vw;
+    width: 400px;
 }
 
 .toDo {
+    transition: all 0.3s;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -104,13 +180,26 @@ body {
 }
 
 .toDo:hover {
-    background-color: #9b9b9b;
-    box-shadow: 0px 8px 4px #00000075;
+    //transition: all 0.3s;
+    //transform: scale(1.1) ;
+    //background-color: #9b9b9b;
+    //box-shadow: 0px 8px 4px #00000075;
 }
 
 .toDo > .text {
     color: #000000;
     font-size: 28px;
+}
+
+
+.black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000085;
+    z-index: 2;
 }
 
 .btns {
@@ -163,19 +252,57 @@ body {
 /*서현*/
 
 .idForm{
+    animation-name: up;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width:369px;
     height:277px;
     border : 1px solid #00A3FF ;
     background-color: #193747;
     border-radius: 10px;
+
+    animation-name: light-blue;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
 }
 
-.idForm > text{
-    font-size:24px;
-    font-family: 'kv1447307594' !important;
+.idForm > .title {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-bottom: 17px;
+}
 
+.idForm > .input{
+    width: 300px;
+    color: #FFD400;
+    font-size: 18px;
+    background-color: #554D37;
+    border: solid 1px #FFB800;
+    border-radius: 16px;
+    text-align: center;
+    padding: 14px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+
+    
+}
+
+input:focus {
+    outline: none;
 }
 
 .hidden {
     display: none;
 }
+
+.first {
+    transition: all 0.3s;
+    z-index: 1000;
+    transform: scale(1.1);
+}
+

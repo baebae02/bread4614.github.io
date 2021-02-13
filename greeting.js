@@ -9,7 +9,7 @@ const USER_LS = "currentUser",
     SHOWING_CN = "showing",
     HIDDEN_CN = "hidden";
 
-const TODO = document.querySelector(".toDoList");
+const container = document.querySelector(".container");
  
 
  
@@ -31,9 +31,9 @@ function askForName() {
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   form.classList.add(HIDDEN_CN);
-  TODO.classList.remove(HIDDEN_CN);
+  container.classList.remove(HIDDEN_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `${text}님`;
+  greeting.innerText = `${text}`;
 }
 
 function loadName() {
