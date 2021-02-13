@@ -19,7 +19,6 @@ function show(event) {
 
 function init() {
     toDo.addEventListener("click", show);
-    console.log(toDo);
 }
 
 init();

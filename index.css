@@ -77,6 +77,7 @@ body {
     animation-name: slide-up;
     animation-iteration-count: infinite;
     animation-duration: 10s;
+    animation-delay: 3s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
 }
 
@@ -162,6 +163,7 @@ body {
     align-items: flex-start;
     padding: 40px 16px;
     width: 400px;
+    transition: all 0.3s;
 }
 
 .toDo {
