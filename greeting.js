@@ -7,7 +7,8 @@ const form = document.querySelector(".idForm"),
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing",
-    HIDDEN_CN = "hidden";
+    HIDDEN_CN = "hidden",
+    HIDDEN_OP = "hiddenOP";
 
 const container = document.querySelector(".container");
  

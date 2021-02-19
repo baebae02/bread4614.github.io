@@ -13,21 +13,30 @@
     }
 }
 
-@keyframes light-yellow {
-    from {
-        background-color: #554D37;
+
+@keyframes slow-up {
+    0% {
+        right: -20px;
     }
-    to {
-        background-color: #6B5825;
+    30% {
+        right: -100px;
+    }
+    100% {
+        right: -80px;
     }
 }
-
-@keyframes light-blue {
-    from {
-        background-color: #193747;
+@keyframes slow-down {
+    0% {
+        right: -80px;
+        opacity: 1;
     }
-    to {
-        background-color: #1A4054;
+    30% {
+        right: -100px;
+        opacity: 1;
+    }
+    99% {
+        right: -20px;
+        opacity: 0;
     }
 }
 
@@ -160,37 +169,60 @@ body {
 .toDos {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 40px 16px;
     width: 400px;
 }
 
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
 .toDo {
     transition: all 0.3s;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 13px;
     background-color: #F3F3F3;
     border-radius: 16px;
     box-shadow: 0px 8px 4px #00000045;
+    padding: 13px;
     margin: 12px 0;
     cursor: pointer;
     word-break: break-all;
-    width: auto;
 }
 
 .toDo:hover {
-    //transition: all 0.3s;
-    //transform: scale(1.1) ;
-    //background-color: #9b9b9b;
-    //box-shadow: 0px 8px 4px #00000075;
+    transition: all 0.3s;
+    box-shadow: 0px 8px 4px #00000075;
 }
 
 .toDo > .text {
     color: #000000;
     font-size: 28px;
+    pointer-events: none;
+}
+
+.options {
+    transition: all 0.3s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    background-color: #FFB800;
+    border-radius: 32px;
+    right: -80px;
+    z-index: 1000;
+
+    cursor: pointer;
+
+    animation-name: slow-up;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
 }
 
 .inputToDo {
@@ -309,10 +341,18 @@ input:focus {
     display: none;
 }
 
+.hiddenOP {
+    animation-name: slow-down;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
 .first {
     transition: all 0.3s;
     z-index: 1000;
-    transform: scale(1.1);
+    transform: scale(1.06);
     width: 100%;
 }
 
