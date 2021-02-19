@@ -1,22 +1,30 @@
+const toDoList2 = document.querySelector(".toDos");
 const toDo = document.querySelector(".toDo");
-const toDoList = document.querySelector(".toDos");
-const counting = document.querySelector(".counting");
-const text = counting.querySelector("span");
+const btn = document.querySelector(".addBtn");
 
-const TODOS_LS = 'toDos';
+const countingAdd = document.querySelector(".counting");
+const textAdd = countingAdd.querySelector("span");
 
-let toDos = [];
+let clickBtn = true;
 
-function loadToDos() {
-    const loadedToDos = localStorage.getItem(TODOS_LS);
+function handleClick(event) {
 
-    if(loadedToDos !== null) {
-        const parsedToDos = JSON.parse(loadedToDos);
-        parsedToDos.forEach(function(toDo) {
-            paintToDo(toDo.text);
-        });
-    } 
-    text.innerText = toDos.length;
+    if(clickBtn) {
+        event.preventDefault();
+        printInput();
+        clickBtn = false;
+    }
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    const btn = event.target;
+    const text = btn.querySelector(".inputToDo");
+    toDoList.removeChild(btn);
+    clickBtn = true;
+
+    const currentValue = text.value;
+    paintToDo(currentValue);
 }
 
 function paintToDo(text) {
@@ -36,12 +44,34 @@ function paintToDo(text) {
         text: text,
         id: newId
     }
-
     toDos.push(toDoObj);
+    saveToDos();
+    
+    textAdd.innerText = toDos.length;
+}
+
+function saveToDos() {
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+
+function printInput() {
+    const div = document.createElement("div");
+    const input = document.createElement("input");
+    const form = document.createElement("form");
+    const newId = toDos.length + 1;
+
+    form.addEventListener("submit", handleSubmit);
+
+    input.classList.add("inputToDo");
+    form.classList.add("toDo");
+    form.id = newId;
+    
+    form.appendChild(input);
+    toDoList2.appendChild(form);   
 }
 
 function init() {
-    loadToDos();
+    btn.addEventListener("click",handleClick);
 }
 
 init();
