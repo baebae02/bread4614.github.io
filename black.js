@@ -1,5 +1,5 @@
-const toDo = document.querySelector(".toDo");
-const black = document.querySelector(".black");
+const black = document.querySelector(".black"); 
+const toDoClick = document.querySelector(".toDo");
 let a = 0;
 
 const BIG = "first";
@@ -8,17 +8,17 @@ const BIG = "first";
 function show(event) {
     if ( a === 0 ) {
         black.classList.remove(HIDDEN_CN);
-        toDo.classList.add(BIG);
+        toDoClick.classList.add(BIG);
         a = 1;
     } else {
         black.classList.add(HIDDEN_CN);
-        toDo.classList.remove(BIG);
+        toDoClick.classList.remove(BIG);
         a = 0;
     }
 }
 
 function init() {
-    toDo.addEventListener("click", show);
+    toDoClick.addEventListener("click", show);
 }
 
 init();

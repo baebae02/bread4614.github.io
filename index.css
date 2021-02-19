@@ -163,7 +163,6 @@ body {
     align-items: flex-start;
     padding: 40px 16px;
     width: 400px;
-    transition: all 0.3s;
 }
 
 .toDo {
@@ -171,7 +170,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 13px;
     background-color: #F3F3F3;
     border-radius: 16px;
@@ -179,6 +178,7 @@ body {
     margin: 12px 0;
     cursor: pointer;
     word-break: break-all;
+    width: auto;
 }
 
 .toDo:hover {
@@ -306,5 +306,6 @@ input:focus {
     transition: all 0.3s;
     z-index: 1000;
     transform: scale(1.1);
+    width: 100%;
 }
 

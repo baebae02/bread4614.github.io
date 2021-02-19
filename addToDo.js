@@ -1,25 +1,36 @@
-const addBtn = document.querySelector(".addBtn");
+const toDo = document.querySelector(".toDo");
+const toDoList = document.querySelector(".toDos");
+const counting = document.querySelector(".counting");
+const text = counting.querySelector("span");
 
-const toDolist = document.querySelector(".toDos");
+const TODOS_LS = 'toDos';
 
 let toDos = [];
 
-function handleSubmit(event) {
-    event.preventDefault();
-    //const currentValue = toDoInput.value;
-    paintToDo(toDos.length+1);
+function loadToDos() {
+    const loadedToDos = localStorage.getItem(TODOS_LS);
+
+    if(loadedToDos !== null) {
+        const parsedToDos = JSON.parse(loadedToDos);
+        parsedToDos.forEach(function(toDo) {
+            paintToDo(toDo.text);
+        });
+    } 
+    text.innerText = toDos.length;
 }
 
 function paintToDo(text) {
     const div = document.createElement("div");
-    const span = document.createElement("span");
+    const divText = document.createElement("div");
     const newId = toDos.length + 1;
+    
+    divText.innerText = text;
+    div.appendChild(divText);
 
-    span.innerText = text;
-    div.appendChild(span);
-    div.id = newId;
+    divText.classList.add("text");
     div.classList.add("toDo");
-    toDolist.appendChild(div);
+    div.id = newId;
+    toDoList.appendChild(div);
 
     const toDoObj = {
         text: text,
@@ -30,7 +41,7 @@ function paintToDo(text) {
 }
 
 function init() {
-    addBtn.addEventListener("click",handleSubmit);
+    loadToDos();
 }
 
 init();
