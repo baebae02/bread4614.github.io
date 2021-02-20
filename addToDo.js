@@ -52,6 +52,13 @@ function handleSubmit(event) {
     paintToDo(currentValue);
 }
 
+function deleteInput(event) {
+    const btn = event.target;
+    const div = btn.parentNode;
+    toDoList2.removeChild(div);
+    clickBtn = true;
+}
+
 function deleteToDo(event) {
     const btn = event.target;
     const div = btn.parentNode;
@@ -118,18 +125,23 @@ function saveToDos() {
 
 function printInput() {
     const div = document.createElement("div");
-    const delBtn = document.createElement("span");
+    const delBtn = document.createElement("div");
+    const delBtn_X = document.createElement("span");
     const input = document.createElement("input");
     const form = document.createElement("form");
     const newId = toDos.length + 1;
 
     form.addEventListener("submit", handleSubmit);
+    delBtn.addEventListener("click", deleteInput);
 
     input.classList.add("inputToDo");
     delBtn.classList.add("delBtn");
+    delBtn_X.classList.add("delBtnX");
     form.classList.add("toDo");
     form.id = newId;
-    delBtn.innerText = "X";
+    delBtn_X.innerText = "X";
+    
+    delBtn.appendChild(delBtn_X);
 
     form.appendChild(input);
     form.appendChild(delBtn);
