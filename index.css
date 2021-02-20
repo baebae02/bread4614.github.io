@@ -18,23 +18,65 @@
     0% {
         right: -20px;
     }
-    30% {
-        right: -100px;
-    }
     100% {
         right: -80px;
     }
 }
+
+@keyframes slow-up2 {
+    0% {
+        top: 14px;
+        right: -20px;
+    }
+    100% {
+        top: -50px;
+        right: -80px;
+    }
+}
+
+@keyframes slow-up3 {
+    0% {
+        top: 14px;
+        right: -20px;
+    }
+    100% {
+        top: 78px;
+        right: -80px;
+    }
+}
+
 @keyframes slow-down {
     0% {
         right: -80px;
-        opacity: 1;
+        opacity: 0.5;
     }
-    30% {
-        right: -100px;
-        opacity: 1;
+    100% {
+        right: -20px;
+        opacity: 0;
     }
-    99% {
+}
+
+@keyframes slow-down2 {
+    0% {
+        top: -50px;
+        right: -80px;
+        opacity: 0.5;
+    }
+    100% {
+        top: 14px;
+        right: -20px;
+        opacity: 0;
+    }
+}
+
+@keyframes slow-down3 {
+    0% {
+        top: 78px;
+        right: -80px;
+        opacity: 0.5;
+    }
+    100% {
+        top: 14px;
         right: -20px;
         opacity: 0;
     }
@@ -213,8 +255,8 @@ body {
     flex-direction: column;
     width: 50px;
     height: 50px;
-    background-color: #FFB800;
-    border-radius: 32px;
+    background-color: #06CD32;
+    border-radius: 16px;
     right: -80px;
     z-index: 1000;
 
@@ -225,12 +267,66 @@ body {
     animation-duration: 0.5s;
 }
 
+.options1 {
+    transition: all 0.3s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    background-color: #106DFA;
+    border-radius: 16px;
+    top: -50px;
+    right: -80px;
+    z-index: 1000;
+    animation-fill-mode: forwards;
+
+    cursor: pointer;
+
+    animation-name: slow-up2;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+.options2 {
+    transition: all 0.3s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    background-color: #E91919;
+    border-radius: 16px;
+    top: 78px;
+    right: -80px;
+    z-index: 1000;
+    animation-fill-mode: forwards;
+
+    cursor: pointer;
+
+    animation-name: slow-up3;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
 .inputToDo {
+    width: 100%;
     border: none;
     color: #000000;
     font-size: 28px;
     font-family: 'seoulNamsanM', sans-serif;
     background-color: #F3F3F3;
+}
+
+.delBtn {
+    display: flex;
+    flex-direction: row;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #505050;
+    color: #CECECE;
 }
 
 .black {
@@ -343,6 +439,22 @@ input:focus {
 
 .hiddenOP {
     animation-name: slow-down;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.hiddenOP2 {
+    animation-name: slow-down2;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.hiddenOP3 {
+    animation-name: slow-down3;
     animation-iteration-count: 1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;

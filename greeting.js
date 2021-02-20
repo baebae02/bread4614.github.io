@@ -8,7 +8,9 @@ const form = document.querySelector(".idForm"),
 const USER_LS = "currentUser",
     SHOWING_CN = "showing",
     HIDDEN_CN = "hidden",
-    HIDDEN_OP = "hiddenOP";
+    HIDDEN_OP = "hiddenOP",
+    HIDDEN_OP2 = "hiddenOP2"
+    HIDDEN_OP3 = "hiddenOP3";
 
 const container = document.querySelector(".container");
  
