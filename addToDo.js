@@ -139,7 +139,6 @@ function saveToDos() {
 }
 
 function printInput() {
-    const div = document.createElement("div");
     const delBtn = document.createElement("div");
     const delBtn_X = document.createElement("span");
     const input = document.createElement("input");
