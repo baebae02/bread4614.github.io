@@ -451,7 +451,7 @@ input:focus {
     display: none;
 }
 
-.hiddenOP {
+.hiddenOP1 {
     animation-name: slow-down1;
     animation-iteration-count: 1;
     animation-duration: 0.5s;
@@ -483,5 +483,6 @@ input:focus {
 }
 
 .icon {
+    pointer-events: none;
     margin-top: 5px;
 }

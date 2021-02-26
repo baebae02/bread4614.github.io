@@ -15,6 +15,8 @@ function show(event) {
     const toDoClick = event.target;
     const Box = toDoClick.parentNode;
     const Options = Box.childNodes;
+    console.log(Options);
+    console.log(Options[1]);
     if ( a === 0 ) {
         black.classList.remove(HIDDEN_CN);
         Options[1].classList.remove(HIDDEN_OP1);
