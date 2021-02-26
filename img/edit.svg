@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.082" height="43.229" viewBox="0 0 41.082 43.229">
+  <defs>
+    <filter id="사각형_199" x="6.993" y="1.77" width="34.089" height="34.089" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_212" x="0" y="22.125" width="20.699" height="21.105" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_147" data-name="그룹 147" transform="translate(3.041)">
+    <g id="그룹_144" data-name="그룹 144" transform="translate(2.959 3.77)">
+      <g transform="matrix(1, 0, 0, 1, -6, -3.77)" filter="url(#사각형_199)">
+        <rect id="사각형_199-2" data-name="사각형 199" width="5.895" height="25.344" rx="2.947" transform="translate(30.91 3.77) rotate(45)" fill="#00a3ff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6, -3.77)" filter="url(#패스_212)">
+        <path id="패스_212-2" data-name="패스 212" d="M10.406,27.972a2.708,2.708,0,0,1,4.348-.725h0a2.708,2.708,0,0,1-.562,4.261l-6.96,4.016a.256.256,0,0,1-.128.034h0a.256.256,0,0,1-.23-.368Z" transform="translate(-0.85 -2.33)" fill="#00a3ff"/>
+      </g>
+    </g>
+    <rect id="사각형_206" data-name="사각형 206" width="35" height="35" fill="none"/>
+  </g>
+</svg>

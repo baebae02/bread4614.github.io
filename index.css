@@ -13,23 +13,22 @@
     }
 }
 
-
-@keyframes slow-up {
-    0% {
-        right: -20px;
-    }
-    100% {
-        right: -80px;
-    }
-}
-
-@keyframes slow-up2 {
+@keyframes slow-up1 {
     0% {
         top: 14px;
         right: -20px;
     }
     100% {
         top: -50px;
+        right: -80px;
+    }
+}
+
+@keyframes slow-up2 {
+    0% {
+        right: -20px;
+    }
+    100% {
         right: -80px;
     }
 }
@@ -45,18 +44,7 @@
     }
 }
 
-@keyframes slow-down {
-    0% {
-        right: -80px;
-        opacity: 0.5;
-    }
-    100% {
-        right: -20px;
-        opacity: 0;
-    }
-}
-
-@keyframes slow-down2 {
+@keyframes slow-down1 {
     0% {
         top: -50px;
         right: -80px;
@@ -68,6 +56,18 @@
         opacity: 0;
     }
 }
+
+@keyframes slow-down2 {
+    0% {
+        right: -80px;
+        opacity: 0.5;
+    }
+    100% {
+        right: -20px;
+        opacity: 0;
+    }
+}
+
 
 @keyframes slow-down3 {
     0% {
@@ -248,33 +248,16 @@ body {
     pointer-events: none;
 }
 
-.options {
-    transition: all 0.3s;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 50px;
-    height: 50px;
-    background-color: #06CD32;
-    border-radius: 16px;
-    right: -80px;
-    z-index: 1000;
-
-    cursor: pointer;
-
-    animation-name: slow-up;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
-}
-
 .options1 {
     transition: all 0.3s;
     position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #106DFA;
+    background-color: #06CD32;
     border-radius: 16px;
     top: -50px;
     right: -80px;
@@ -283,7 +266,7 @@ body {
 
     cursor: pointer;
 
-    animation-name: slow-up2;
+    animation-name: slow-up1;
     animation-iteration-count: 1;
     animation-duration: 0.5s;
 }
@@ -293,6 +276,31 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #106DFA;
+    border-radius: 16px;
+    right: -80px;
+    z-index: 1000;
+
+    cursor: pointer;
+
+    animation-name: slow-up2;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+
+
+.options3 {
+    transition: all 0.3s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     background-color: #E91919;
@@ -444,7 +452,7 @@ input:focus {
 }
 
 .hiddenOP {
-    animation-name: slow-down;
+    animation-name: slow-down1;
     animation-iteration-count: 1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -474,3 +482,6 @@ input:focus {
     width: 100%;
 }
 
+.icon {
+    margin-top: 5px;
+}

@@ -14,7 +14,7 @@ function show(event) {
     console.log(Options[1]);
     if ( a === 0 ) {
         black.classList.remove(HIDDEN_CN);
-        Options[1].classList.remove(HIDDEN_OP);
+        Options[1].classList.remove(HIDDEN_OP1);
         Options[2].classList.remove(HIDDEN_OP2);
         Options[3].classList.remove(HIDDEN_OP3);
         Options[1].classList.remove(HIDDEN_CN);
@@ -24,7 +24,7 @@ function show(event) {
         a = 1;
     } else {
         black.classList.add(HIDDEN_CN);
-        Options[1].classList.add(HIDDEN_OP);
+        Options[1].classList.add(HIDDEN_OP1);
         Options[2].classList.add(HIDDEN_OP2);
         Options[3].classList.add(HIDDEN_OP3);
         toDoClick.classList.remove(BIG);
@@ -77,9 +77,16 @@ function paintToDo(text) {
     const div_option = document.createElement("div");
     const div_option1 = document.createElement("div");
     const div_option2 = document.createElement("div");
+    const img1 = document.createElement("img");
+    const img2 = document.createElement("img");
+    const img3 = document.createElement("img");
     const div_toDo = document.createElement("div");
     const div_text = document.createElement("div");
     const newId = toDos.length + 1;
+
+    img1.setAttribute("src","./img/complete.svg");
+    img2.setAttribute("src","./img/edit.svg");
+    img3.setAttribute("src","./img/delete.svg");
 
     div_option.addEventListener("click", deleteToDo);
     div_option.addEventListener("click", show);
@@ -100,6 +107,12 @@ function paintToDo(text) {
     div_option2.classList.add("options2");
     div_option2.classList.add(HIDDEN_CN);
     div_box.classList.add("box");
+    img1.classList.add("icon");
+    img2.classList.add("icon");
+    img3.classList.add("icon");
+    div_option1.appendChild(img1);
+    div_option2.appendChild(img2);
+    div_option3.appendChild(img3);
     div_box.appendChild(div_toDo);
     div_box.appendChild(div_option);
     div_box.appendChild(div_option1);

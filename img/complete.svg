@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.521" height="40.305" viewBox="0 0 38.521 40.305">
+  <defs>
+    <filter id="사각형_202" x="0" y="9.669" width="25.247" height="30.63" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_203" x="7.392" y="2.348" width="31.13" height="37.958" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_149" data-name="그룹 149" transform="translate(1.948 0.014)">
+    <g id="그룹_146" data-name="그룹 146" transform="translate(4.052 4.334)">
+      <g transform="matrix(1, 0, 0, 1, -6, -4.35)" filter="url(#사각형_202)">
+        <rect id="사각형_202-2" data-name="사각형 202" width="4.314" height="19.021" rx="2.157" transform="translate(6 13.83) rotate(-30)" fill="#2cee56"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6, -4.35)" filter="url(#사각형_203)">
+        <rect id="사각형_203-2" data-name="사각형 203" width="4.314" height="28.237" rx="2.157" transform="translate(28.92 4.35) rotate(33.36)" fill="#2cee56"/>
+      </g>
+      <rect id="사각형_204" data-name="사각형 204" width="4.314" height="19.021" rx="2.157" transform="translate(0 9.478) rotate(-30)" fill="#2cee56"/>
+    </g>
+    <rect id="사각형_207" data-name="사각형 207" width="35" height="35" transform="translate(0 -0.014)" fill="none"/>
+  </g>
+</svg>
