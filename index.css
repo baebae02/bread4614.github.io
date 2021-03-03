@@ -327,22 +327,7 @@ body {
 }
 
 .delBtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    text-align: center;
-    border-radius: 28px;
-    background-color: #505050;
-    color: #CECECE;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.delBtnX {
-    pointer-events: none;
+    cursor: pointer;
 }
 
 .black {
@@ -358,9 +343,13 @@ body {
 .btns {
     display: flex;
     flex-direction: row;
+    height: 64px;
 }
 
 .addBtn {
+    background: url('./img/add.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #00A3FF;
     display: flex;
     flex-direction: row;
@@ -371,6 +360,9 @@ body {
 }
 
 .addBtn:hover {
+    background: url('./img/add-over.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #117AB5;
 }
 
@@ -389,6 +381,9 @@ body {
 }
 
 .changeBtn {
+    background: url('./img/mode.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #00A3FF;
     display: flex;
     flex-direction: row;
@@ -399,6 +394,9 @@ body {
 }
 
 .changeBtn:hover {
+    background: url('./img/mode-over.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #117AB5;
 }
 

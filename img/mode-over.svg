@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.991" height="59.91" viewBox="0 0 61.991 59.91">
+  <defs>
+    <filter id="사각형_6" x="20.293" y="0" width="41.698" height="41.698" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_7" x="0" y="0" width="41.698" height="41.698" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_5" x="8.996" y="17.91" width="44" height="42" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-3"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_7" data-name="그룹 7" transform="translate(-224.004 -119.09)">
+    <g id="그룹_8" data-name="그룹 8" transform="translate(0 1)">
+      <g transform="matrix(1, 0, 0, 1, 224, 118.09)" filter="url(#사각형_6)">
+        <rect id="사각형_6-2" data-name="사각형 6" width="35" height="7" rx="3.5" transform="translate(31.24 2) rotate(45)" fill="#117ab5"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 224, 118.09)" filter="url(#사각형_7)">
+        <rect id="사각형_7-2" data-name="사각형 7" width="35" height="7" rx="3.5" transform="translate(35.7 6.95) rotate(135)" fill="#117ab5"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 224, 118.09)" filter="url(#사각형_5)">
+        <path id="사각형_5-2" data-name="사각형 5" d="M16,0h0A16,16,0,0,1,32,16V30a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V16A16,16,0,0,1,16,0Z" transform="translate(15 19.91)" fill="#117ab5"/>
+      </g>
+      <rect id="사각형_8" data-name="사각형 8" width="35" height="7" rx="3.5" transform="translate(255.247 120.09) rotate(45)" fill="#117ab5"/>
+    </g>
+    <rect id="사각형_4" data-name="사각형 4" width="50" height="50" transform="translate(230 120)" fill="none"/>
+  </g>
+</svg>

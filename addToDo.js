@@ -139,8 +139,7 @@ function saveToDos() {
 }
 
 function printInput() {
-    const delBtn = document.createElement("div");
-    const delBtn_X = document.createElement("span");
+    const delBtn = document.createElement("img");
     const input = document.createElement("input");
     const form = document.createElement("form");
     const newId = toDos.length + 1;
@@ -150,12 +149,10 @@ function printInput() {
 
     input.classList.add("inputToDo");
     delBtn.classList.add("delBtn");
-    delBtn_X.classList.add("delBtnX");
     form.classList.add("toDo");
     form.id = newId;
-    delBtn_X.innerText = "X";
-    
-    delBtn.appendChild(delBtn_X);
+
+    delBtn.setAttribute("src","./img/delBtnX.svg");
 
     form.appendChild(input);
     form.appendChild(delBtn);
