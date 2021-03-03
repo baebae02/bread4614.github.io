@@ -12,8 +12,6 @@ function show(event) {
     const toDoClick = event.target;
     const Box = toDoClick.parentNode;
     const Options = Box.childNodes;
-    console.log(Options);
-    console.log(Options[1]);
     if ( a === 0 ) {
         black.classList.remove(HIDDEN_CN);
         Options[1].classList.remove(HIDDEN_OP1);
@@ -114,9 +112,9 @@ function paintToDo(text) {
     img2.setAttribute("src","./img/edit.svg");
     img3.setAttribute("src","./img/delete.svg");
 
-    div_option1.addEventListener("click", deleteToDo);
+    div_option1.addEventListener("click", saveToDones);
     div_option1.addEventListener("click", show);
-    div_option2.addEventListener("click", saveToDones);
+    div_option2.addEventListener("click", deleteToDo);
     div_option2.addEventListener("click", show);
     div_option3.addEventListener("click", deleteToDo);
     div_option3.addEventListener("click", show);

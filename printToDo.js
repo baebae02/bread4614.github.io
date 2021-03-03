@@ -43,11 +43,13 @@ function loadToDos() {
 
     if(loadedToDos !== null) {
         const parsedToDos = JSON.parse(loadedToDos);
-        const parsedToDones = JSON.parse(loadedToDones);
-        console.log(parsedToDones);
         parsedToDos.forEach(function(toDo) {
             paintToDo(toDo.text);
         });
+    }
+
+    if(loadedToDones !== null) {
+        const parsedToDones = JSON.parse(loadedToDones);
         parsedToDones.forEach(function(toDone) {
             stackToDo(toDone.text);
         });
@@ -108,9 +110,9 @@ function paintToDo(text) {
     img2.setAttribute("src","./img/edit.svg");
     img3.setAttribute("src","./img/delete.svg");
 
-    div_option1.addEventListener("click", deleteToDo);
+    div_option1.addEventListener("click", saveToDones);
     div_option1.addEventListener("click", show);
-    div_option2.addEventListener("click", saveToDones);
+    div_option2.addEventListener("click", deleteToDo);
     div_option2.addEventListener("click", show);
     div_option3.addEventListener("click", deleteToDo);
     div_option3.addEventListener("click", show);
