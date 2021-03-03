@@ -8,15 +8,15 @@ let a = 0;
 const BIG = "first";
 
 const TODOS_LS = 'toDos';
+const TODONES_LS = 'toDones';
 
 let toDos = [];
+let toDones = [];
 
 function show(event) {
     const toDoClick = event.target;
     const Box = toDoClick.parentNode;
     const Options = Box.childNodes;
-    console.log(Options);
-    console.log(Options[1]);
     if ( a === 0 ) {
         black.classList.remove(HIDDEN_CN);
         Options[1].classList.remove(HIDDEN_OP1);
@@ -39,13 +39,20 @@ function show(event) {
 
 function loadToDos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
+    const loadedToDones = localStorage.getItem(TODONES_LS);
 
     if(loadedToDos !== null) {
         const parsedToDos = JSON.parse(loadedToDos);
+        const parsedToDones = JSON.parse(loadedToDones);
+        console.log(parsedToDones);
         parsedToDos.forEach(function(toDo) {
             paintToDo(toDo.text);
         });
-    } 
+        parsedToDones.forEach(function(toDone) {
+            stackToDo(toDone.text);
+        });
+    }
+
     text.innerText = toDos.length;
 }
 
@@ -61,6 +68,29 @@ function deleteToDo(event) {
 
     text.innerText = toDos.length;
 }
+
+function saveToDones(event) {
+    const btn = event.target;
+    const div = btn.parentNode;
+    const div_text = div.childNodes[0].childNodes[0].innerText;
+    const newId = toDones.length + 1;
+
+    toDoList.removeChild(div);
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(div.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+
+    const toDoObj = {
+        text: div_text,
+        id: newId
+    }
+    toDones.push(toDoObj);
+    localStorage.setItem(TODONES_LS, JSON.stringify(toDones));
+
+    text.innerText = toDos.length;
+} 
 
 function paintToDo(text) {
     const div_box = document.createElement("div");
@@ -80,7 +110,7 @@ function paintToDo(text) {
 
     div_option1.addEventListener("click", deleteToDo);
     div_option1.addEventListener("click", show);
-    div_option2.addEventListener("click", deleteToDo);
+    div_option2.addEventListener("click", saveToDones);
     div_option2.addEventListener("click", show);
     div_option3.addEventListener("click", deleteToDo);
     div_option3.addEventListener("click", show);
@@ -118,6 +148,17 @@ function paintToDo(text) {
     }
 
     toDos.push(toDoObj);
+}
+
+function stackToDo(text) {
+    const newId = toDones.length + 1;
+
+    const toDoObj = {
+        text: text,
+        id: newId
+    }
+
+    toDones.push(toDoObj);
 }
 
 function init() {

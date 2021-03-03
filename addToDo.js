@@ -7,6 +7,7 @@ const textAdd = countingAdd.querySelector("span");
 
 let clickBtn = true;
 
+
 function show(event) {
     const toDoClick = event.target;
     const Box = toDoClick.parentNode;
@@ -74,6 +75,29 @@ function deleteToDo(event) {
     text.innerText = toDos.length;
 }
 
+function saveToDones(event) {
+    const btn = event.target;
+    const div = btn.parentNode;
+    const div_text = div.childNodes[0].childNodes[0].innerText;
+    const newId = toDones.length + 1;
+
+    toDoList.removeChild(div);
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(div.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+
+    const toDoObj = {
+        text: div_text,
+        id: newId
+    }
+    toDones.push(toDoObj);
+    localStorage.setItem(TODONES_LS, JSON.stringify(toDones));
+
+    text.innerText = toDos.length;
+} 
+
 function paintToDo(text) {
     const div_box = document.createElement("div");
     const div_option1 = document.createElement("div");
@@ -92,7 +116,7 @@ function paintToDo(text) {
 
     div_option1.addEventListener("click", deleteToDo);
     div_option1.addEventListener("click", show);
-    div_option2.addEventListener("click", deleteToDo);
+    div_option2.addEventListener("click", saveToDones);
     div_option2.addEventListener("click", show);
     div_option3.addEventListener("click", deleteToDo);
     div_option3.addEventListener("click", show);
