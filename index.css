@@ -177,6 +177,9 @@ body {
     flex-direction: column;
     border-radius: 16px;
     background-color: #CFCFCF;
+    height : 700px; 
+    overflow: hidden;
+
 }
 
 .header {
@@ -188,6 +191,7 @@ body {
     justify-content: space-between;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    
 }
 
 .header > .text {
@@ -214,6 +218,7 @@ body {
     align-items: stretch;
     padding: 40px 16px;
     width: 400px;
+    overflow:scroll;
 }
 
 .box {
