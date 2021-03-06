@@ -101,8 +101,13 @@ body {
     font-family: 'seoulNamsanM', sans-serif;
 }
 
+.template {
+    display: flex;
+    flex-direction: row;
+}
+
 .toDoList {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,6 +119,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 50px 0;
 }
 
 .topTitle {
@@ -177,7 +183,7 @@ body {
     flex-direction: column;
     border-radius: 16px;
     background-color: #CFCFCF;
-    height : 700px; 
+    height : 650px; 
     overflow: hidden;
 
 }
@@ -218,7 +224,7 @@ body {
     align-items: stretch;
     padding: 40px 16px;
     width: 400px;
-    overflow:scroll;
+    overflow: scroll;
 }
 
 .box {
@@ -226,6 +232,7 @@ body {
     flex-direction: row;
     align-items: center;
     position: relative;
+    margin: 0 80px 0 10px;
 }
 .toDo {
     transition: all 0.3s;
@@ -273,7 +280,7 @@ body {
 
     animation-name: slow-up1;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
 }
 
 .options2 {
@@ -319,7 +326,7 @@ body {
 
     animation-name: slow-up3;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    animation-duration: 0.6s;
 }
 
 .inputToDo {
@@ -457,7 +464,7 @@ input:focus {
 .hiddenOP1 {
     animation-name: slow-down1;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -465,7 +472,7 @@ input:focus {
 .hiddenOP2 {
     animation-name: slow-down2;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -473,7 +480,7 @@ input:focus {
 .hiddenOP3 {
     animation-name: slow-down3;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
